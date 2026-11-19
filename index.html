@@ -1,0 +1,769 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;family=Syne:wght@700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "on-tertiary-container": "#ffded9", "secondary-fixed-dim": "#b3c5ff", "on-tertiary-fixed": "#410001", "surface": "#fcf8fb", "primary-container": "#b83a24", "surface-variant": "#e5e1e4", "inverse-primary": "#ffb4a5", "tertiary-fixed-dim": "#ffb4a9", "on-surface": "#1b1b1d", "secondary-fixed": "#dae1ff", "on-secondary-container": "#f9f7ff", "error-container": "#ffdad6", "inverse-surface": "#303032", "on-primary-container": "#ffded8", "tertiary-container": "#bf3025", "inverse-on-surface": "#f3f0f2", "background": "#fcf8fb", "on-secondary": "#ffffff", "on-tertiary": "#ffffff", "on-primary-fixed-variant": "#8b1907", "surface-container-highest": "#e5e1e4", "surface-tint": "#ad321d", "surface-container-low": "#f6f3f5", "outline": "#8d716b", "surface-dim": "#dcd9dc", "surface-container-lowest": "#ffffff", "on-surface-variant": "#59413c", "on-secondary-fixed": "#001849", "secondary-container": "#0266ff", "tertiary-fixed": "#ffdad5", "secondary": "#0050cc", "outline-variant": "#e0bfb9", "on-background": "#1b1b1d", "surface-container": "#f0edef", "surface-bright": "#fcf8fb", "on-primary": "#ffffff", "primary-fixed": "#ffdad3", "on-tertiary-fixed-variant": "#910908", "primary": "#96220e", "on-error": "#ffffff", "primary-fixed-dim": "#ffb4a5", "on-secondary-fixed-variant": "#003fa4", "error": "#ba1a1a", "surface-container-high": "#eae7ea", "on-error-container": "#93000a", "on-primary-fixed": "#3f0400", "tertiary": "#9c1510" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "gutter": "1rem", "margin-desktop": "3rem", "margin": "1.25rem", "gutter-desktop": "1.5rem", "space-xl": "2.5rem", "space-sm": "0.5rem", "space-md": "1rem", "space-lg": "1.5rem", "space-xs": "0.25rem" }, fontFamily: { "label-lg": ["Plus Jakarta Sans"], "title-md": ["Plus Jakarta Sans"], "label-tag": ["Plus Jakarta Sans"], "body-sm": ["Inter"], "body-lg": ["Inter"], "headline-lg-mobile": ["Syne"], "headline-md": ["Syne"], "label-md": ["Plus Jakarta Sans"], "display-hero-mobile": ["Syne"], "headline-lg": ["Syne"], "headline-sm": ["Plus Jakarta Sans"], "display-hero": ["Syne"], "body-md": ["Inter"] }, fontSize: { "label-lg": ["14px", { lineHeight: "18px", letterSpacing: "0.02em", fontWeight: "700" }], "title-md": ["17px", { lineHeight: "22px", fontWeight: "600" }], "label-tag": ["11px", { lineHeight: "14px", letterSpacing: "0.06em", fontWeight: "800" }], "body-sm": ["13px", { lineHeight: "18px", fontWeight: "400" }], "body-lg": ["17px", { lineHeight: "26px", fontWeight: "400" }], "headline-lg-mobile": ["30px", { lineHeight: "36px", letterSpacing: "-0.01em", fontWeight: "700" }], "headline-md": ["26px", { lineHeight: "32px", letterSpacing: "-0.01em", fontWeight: "700" }], "label-md": ["12px", { lineHeight: "16px", letterSpacing: "0.04em", fontWeight: "700" }], "display-hero-mobile": ["38px", { lineHeight: "42px", letterSpacing: "-0.02em", fontWeight: "800" }], "headline-lg": ["40px", { lineHeight: "46px", letterSpacing: "-0.02em", fontWeight: "700" }], "headline-sm": ["20px", { lineHeight: "26px", fontWeight: "700" }], "display-hero": ["56px", { lineHeight: "60px", letterSpacing: "-0.03em", fontWeight: "800" }], "body-md": ["15px", { lineHeight: "22px", fontWeight: "400" }] } } } };</script><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style> body { min-height: max(884px, 100dvh); } </style> </head>
+<body class="bg-slate-900 text-on-surface font-body-md text-body-md flex justify-center min-h-screen"> <div class="w-full max-w-md bg-surface min-h-screen relative shadow-2xl flex flex-col"> <header class="fixed top-0 w-full z-50 pt-safe bg-surface/85 backdrop-blur-xl shadow-[0_1px_12px_rgba(27,27,29,0.05)]"><div class="h-16 px-margin flex items-center justify-between"><div class="flex items-center gap-space-sm"><img alt="Museo Arocena Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrCMXJp3hHXtNd7lvcf5tmDS_VJTsDzRrw-v9RVcx2Sonb-Y9aoCULDD1DBsvRHW1KoDnFL7rpcy0LV19WyHp4b7mag0R_78I3gloewar_OgGiOMzDNV3zG7DW-n3IVAjB8UGxVJwyHZ7jS3x_jfhPcEYV4s8Ss8VpLgVkKGQrfHfwxgRh-UHIX7G5E12-zkp_QVlY31KXYvPQB3i5_CedZJ4AZvQOTgT_zCUiFzQkHZ"/><span class="inline-flex items-center px-space-sm py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-tag text-label-tag tracking-wider uppercase">TORREÓN, COAH.</span></div><div class="flex items-center gap-space-sm"><span class="sr-only">Descubre</span><a class="relative flex items-center justify-center min-w-[44px] min-h-[44px] rounded-full focus:outline-none focus:ring-2 focus:ring-secondary" data-path="perfil-cultural" href="#"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCddg4USB4a5G5Seu_StaqbHauInMwEee2nLcQ7213IT1zBob-19LW6F00_ftafLddpVnW4-vt8Tnh4KUUjHXtt38utCKHCQrc6f27SNv9D8sFcuLWmWLshTCPo8JJXAubVtRjyNdN1J3mTnV5NjEvgYfFGDI4n7ZYIsLGLqyuDiNHLvLyFskqnbRf5WeAKLNgSskr5wSkhVCngcSpCWUTAm3gzWJMR3zC4zP89uWI"/><span class="absolute top-1.5 right-1.5 w-2.5 h-2.5 rounded-full bg-secondary ring-2 ring-surface"></span></a></div></div></header> <div id="view-descubre" class="view-pane flex-1"> <main class="flex flex-col relative w-full pt-16 pb-24 bg-surface min-h-screen"> <div class="flex flex-col w-full"> <div class="relative w-full overflow-hidden px-margin pb-space-lg pt-space-md">
+<div class="absolute -top-12 -right-12 w-56 h-56 rounded-full bg-primary-fixed/40 blur-3xl pointer-events-none"></div>
+<div class="absolute top-44 -left-12 w-64 h-64 rounded-full bg-secondary-fixed/50 blur-3xl pointer-events-none"></div> <div class="inline-flex items-center gap-space-xs bg-surface-container-lowest shadow-sm px-3 py-1.5 rounded-full mb-space-md">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-tertiary-container opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-tertiary"></span>
+</span>
+<span class="font-label-tag text-label-tag text-on-surface uppercase tracking-wider">Centro Histórico · Torreón</span>
+<span class="text-on-surface-variant font-label-tag text-label-tag">Abierto hasta 10:00 PM</span>
+</div> <div class="relative z-10 flex flex-col gap-space-xs">
+<h1 class="font-display-hero-mobile text-display-hero-mobile text-on-surface font-extrabold tracking-tight"> El arte no se mira en silencio. <span class="text-primary-container italic font-bold">Se vive</span> con amigos. </h1>
+<p class="font-body-md text-body-md text-on-surface-variant mt-space-xs leading-relaxed"> El spot cultural más vivo de Torreón: música en el patio central, pistas en realidad aumentada, café de especialidad y noches temáticas sin poses. </p>
+</div> <div class="flex gap-2 overflow-x-auto no-scrollbar mt-space-md -mx-margin px-margin py-1">
+<span class="inline-flex items-center gap-1.5 whitespace-nowrap bg-primary-container text-on-primary font-label-md text-label-md px-3 py-1.5 rounded-full shadow-sm">
+<span class="material-symbols-outlined text-[16px]">local_fire_department</span> 2x1 Estudiantes </span>
+<span class="inline-flex items-center gap-1.5 whitespace-nowrap bg-surface-container-high text-on-surface font-label-md text-label-md px-3 py-1.5 rounded-full shadow-sm">
+<span class="material-symbols-outlined text-[16px]">local_cafe</span> Rooftop &amp; Café </span>
+<span class="inline-flex items-center gap-1.5 whitespace-nowrap bg-secondary text-on-secondary font-label-md text-label-md px-3 py-1.5 rounded-full shadow-sm">
+<span class="material-symbols-outlined text-[16px]">headphones</span> Silent Disco Viernes </span>
+<span class="inline-flex items-center gap-1.5 whitespace-nowrap bg-surface-container-lowest text-on-surface font-label-md text-label-md px-3 py-1.5 rounded-full shadow-sm">
+<span class="material-symbols-outlined text-[16px]">confirmation_number</span> Entrada Gratis Dom </span>
+</div> <div class="flex flex-col sm:flex-row gap-space-sm mt-space-lg">
+<a class="flex items-center justify-center gap-2 bg-primary-container text-on-primary font-label-lg text-label-lg px-6 py-3.5 rounded-full shadow-md active:scale-95 transition-all text-center" data-path="eventos-noches" href="#">
+<span>Descubrir Noches Arocena</span>
+<span class="material-symbols-outlined text-[20px]">nightlife</span>
+</a>
+<a class="flex items-center justify-center gap-2 bg-surface-container-lowest text-on-surface font-label-lg text-label-lg px-6 py-3.5 rounded-full shadow-sm active:scale-95 transition-all text-center" href="#experiencias">
+<span>Ver qué hacer hoy</span>
+<span class="material-symbols-outlined text-[20px]">arrow_downward</span>
+</a>
+</div>
+</div> <div class="px-margin mb-space-xl">
+<div class="relative w-full rounded-xl overflow-hidden shadow-md bg-surface-container-lowest">
+<div class="bg-cover bg-center w-full h-56 flex flex-col justify-end p-4" data-alt="Vibrant youth night event at historic Mexican courtyard museum, warm glowing festoon lights, young adults laughing in casual stylish clothes holding local mezcal drinks, modern DJ booth near classical colonial stone arches, cinematic moody terracotta tones and electric cobalt ambient lighting, high quality editorial photography" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCjnLRaUltR25b_UKTDBREfEQ5W8Jshu7mLkz0JHRR1fLqBHAM3ZQG1tUOCc72mY_y6vxK_NhpFRZgQgF3szfe1bLbCygtso9ls3nWgm4SOOamgnXo7_4ZOuuWUG2NUVAvy12wWnmZe5vYsVWugtAvJshnC9VdDncb7TQw0hwchhL0_pIAwwVR_8956KUBsoMsjNySgMHRzXq_6-ulNDJdEYiLQyuRDsMaeBHpg4VY')">
+<div class="absolute inset-0 bg-gradient-to-t from-on-surface/90 via-on-surface/30 to-transparent"></div>
+<div class="relative z-10 flex items-center justify-between">
+<div class="flex flex-col text-on-secondary">
+<span class="font-label-tag text-label-tag text-tertiary-fixed tracking-wider uppercase">Live en Patio Central</span>
+<span class="font-headline-sm text-headline-sm text-on-secondary">Las tardes cambian el juego</span>
+</div>
+<span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-surface-container-lowest/90 backdrop-blur-md text-primary">
+<span class="material-symbols-outlined text-[22px]">play_arrow</span>
+</span>
+</div>
+</div>
+</div>
+</div> <section class="flex flex-col px-margin mb-space-xl" id="experiencias">
+<div class="flex items-end justify-between mb-space-md">
+<div>
+<span class="font-label-tag text-label-tag text-primary-container uppercase tracking-wider">Nueva Vibra Cultural</span>
+<h2 class="font-headline-md text-headline-md text-on-surface font-bold">¿Por qué ahora es diferente?</h2>
+</div>
+<span class="font-label-tag text-label-tag text-on-surface-variant">04 PILARES</span>
+</div> <div class="grid grid-cols-1 gap-space-md"> <div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-sm relative overflow-hidden">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm font-extrabold text-primary-container">01</span>
+<span class="p-2 rounded-full bg-primary-fixed text-on-primary-fixed-variant">
+<span class="material-symbols-outlined text-[22px]">music_note</span>
+</span>
+</div>
+<div class="flex flex-col">
+<h3 class="font-title-md text-title-md text-on-surface font-bold">Noches Arocena</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1"> DJ sets en vivo, mezcal artesanal de Parras, mapping sobre arquitectura histórica y cero solemnidad aburrida. </p>
+</div>
+<div class="flex items-center gap-2 pt-2 text-primary font-label-md text-label-md">
+<span>Ver cartelera de DJs</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</div>
+</div> <div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-sm relative overflow-hidden">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm font-extrabold text-secondary">02</span>
+<span class="p-2 rounded-full bg-secondary-fixed text-on-secondary-fixed">
+<span class="material-symbols-outlined text-[22px]">view_in_ar</span>
+</span>
+</div>
+<div class="flex flex-col">
+<h3 class="font-title-md text-title-md text-on-surface font-bold">Desafío AR &amp; Gamificación</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1"> Resuelve enigmas escondidos entre las salas virreinales con tu smartphone. Desbloquea café gratis y stickers coleccionables. </p>
+</div>
+<div class="flex items-center gap-2 pt-2 text-secondary font-label-md text-label-md">
+<span>Abrir pistas de realidad aumentada</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</div>
+</div> <div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-sm relative overflow-hidden">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm font-extrabold text-tertiary-container">03</span>
+<span class="p-2 rounded-full bg-tertiary-fixed text-on-tertiary-fixed-variant">
+<span class="material-symbols-outlined text-[22px]">photo_camera</span>
+</span>
+</div>
+<div class="flex flex-col">
+<h3 class="font-title-md text-title-md text-on-surface font-bold">Creators &amp; Aesthetic Spots</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1"> Espacios coloniales e industriales con luz natural cenital. Crea tu contenido, fotos para IG y TikTok sin restricciones absurdas. </p>
+</div>
+<div class="flex items-center gap-2 pt-2 text-tertiary font-label-md text-label-md">
+<span>Mapa de puntos instagrameables</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</div>
+</div> <div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-sm relative overflow-hidden">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm font-extrabold text-on-surface">04</span>
+<span class="p-2 rounded-full bg-surface-container-high text-on-surface">
+<span class="material-symbols-outlined text-[22px]">brush</span>
+</span>
+</div>
+<div class="flex flex-col">
+<h3 class="font-title-md text-title-md text-on-surface font-bold">Talleres No Tradicionales</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1"> Custom de sneakers, serigrafía en tote bags, cerámica experimental y grabado contemporáneo mientras te tomas una cerveza lagunera. </p>
+</div>
+<div class="flex items-center gap-2 pt-2 text-on-surface font-label-md text-label-md">
+<span>Explorar laboratorios creativos</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</div>
+</div>
+</div>
+</section> <div class="px-margin mb-space-xl">
+<div class="bg-gradient-to-br from-primary to-primary-container text-on-primary rounded-xl p-space-md shadow-md relative overflow-hidden">
+<div class="absolute -right-6 -bottom-6 w-36 h-36 bg-on-primary/10 rounded-full blur-xl pointer-events-none"></div>
+<div class="flex items-start justify-between relative z-10">
+<div class="flex flex-col gap-1 max-w-[70%]">
+<span class="font-label-tag text-label-tag uppercase tracking-wider text-primary-fixed">Pase Joven Universitario</span>
+<h3 class="font-headline-sm text-headline-sm leading-tight text-on-primary">Acceso Libre con tu Credencial</h3>
+<p class="font-body-sm text-body-sm text-on-primary-container mt-1">Válido para UAdeC, Ibero Torreón, Tec, UAL y TecMilenio.</p>
+</div>
+<div class="w-14 h-14 rounded-xl bg-surface-container-lowest text-primary flex items-center justify-center font-bold text-headline-sm shadow-md"> GRATIS </div>
+</div>
+<div class="mt-space-md pt-space-sm border-t border-on-primary/20 flex items-center justify-between">
+<span class="font-label-tag text-label-tag text-primary-fixed uppercase">Jueves Universitarios · 4PM a 10PM</span>
+<button class="bg-surface-container-lowest text-primary font-label-tag text-label-tag px-3 py-1.5 rounded-full uppercase tracking-wider shadow-sm active:scale-95 transition-transform" type="button"> Mostrar QR </button>
+</div>
+</div>
+</div> <section class="flex flex-col px-margin mb-space-xl">
+<div class="flex items-end justify-between mb-space-md">
+<div>
+<span class="font-label-tag text-label-tag text-secondary uppercase tracking-wider">Agenda Lagunera</span>
+<h2 class="font-headline-md text-headline-md text-on-surface font-bold">Próximos Eventos</h2>
+</div>
+<a class="font-label-md text-label-md text-secondary" data-path="eventos-noches" href="#">Ver todos</a>
+</div> <div class="flex flex-col gap-space-md"> <div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm flex flex-col">
+<div class="relative w-full h-44">
+<img class="w-full h-full object-cover" data-alt="Neon lighting in a historic courtyard, youthful Mexican crowd dancing to electronic music at night with atmospheric red and blue lasers, modern DJ deck in front of antique arched gallery, authentic documentary style night photography" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAvhrwv_a-mrjU8987dKzkiT_395cusawFoJ3r4EO53RRpV517gzu1Kj0yN1OdfCuZ_YBpC2RcYw85lUgpM6CaRxeH14pluHJa2L-XiL1khUeV9rxEnPaT2eAyx24xPyT3Javz0c46lAlIIuv-zOpqRIaUiC6dFhLBffebX9qh6sUQpLnm1j6jOEjDyiYeDnJ5farqqh7_4yuJ0lqoMWqLPc1168TEOHndhjUZrpDQ"/>
+<div class="absolute top-3 left-3 bg-tertiary text-on-tertiary font-label-tag text-label-tag px-2.5 py-1 rounded-full uppercase tracking-wider flex items-center gap-1 shadow-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-white animate-pulse"></span> 85% Cupo Lleno </div>
+<div class="absolute bottom-3 right-3 bg-surface-container-lowest/90 backdrop-blur-md text-on-surface font-label-tag text-label-tag px-2.5 py-1 rounded-full uppercase"> Patio Central </div>
+</div>
+<div class="p-space-md flex flex-col gap-2">
+<div class="flex items-center gap-2 text-primary font-label-tag text-label-tag uppercase tracking-wide">
+<span class="material-symbols-outlined text-[16px]">calendar_today</span>
+<span>Viernes 24 Mayo · 8:00 PM</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">Noche Neón: Barroco Beats</h3>
+<p class="font-body-md text-body-md text-on-surface-variant"> DJs invitados de la escena electrónica de La Laguna, coctelería de autor y visuales reactivos en vivo sobre piedra cantera. </p>
+<div class="flex items-center justify-between pt-space-xs mt- space-xs">
+<div class="flex items-center gap-1.5">
+<span class="font-title-md text-title-md font-bold text-on-surface">$120 MXN</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant line-through">$240</span>
+</div>
+<button class="bg-primary text-on-primary font-label-md text-label-md px-4 py-2 rounded-full shadow-sm active:scale-95 transition-transform" type="button"> Apartar Lugar </button>
+</div>
+</div>
+</div> <div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm flex flex-col">
+<div class="relative w-full h-44">
+<img class="w-full h-full object-cover" data-alt="Young adults sitting at a wooden rooftop table sketching and painting while enjoying craft beer in glasses, warm afternoon sunset over Torreon city center rooftops, relaxed modern atmosphere, artistic creative workshop" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAHbqyBfunVKxLf80KpELdtNK5fwsGl3fEbN53dai0jKoWdrID_BBgaFYLFBcNHF8zgDxARfj_35moOPYkcfN1bMIQuQ0IXR-96kFE-T-Cc3p_jJw24TqbWBqHniVQNYkORwN2eV2sleIEsLvh0RKC3cQFdcKtYEJ1Pt1R28OwZTGPiftdiOnowe_FgxTTeX3nZIze3DK-kEltRTJN33K2MdepSdrCWbCZmu12qxr4"/>
+<div class="absolute bottom-3 right-3 bg-surface-container-lowest/90 backdrop-blur-md text-on-surface font-label-tag text-label-tag px-2.5 py-1 rounded-full uppercase"> Terraza Casa Histórica </div>
+</div>
+<div class="p-space-md flex flex-col gap-2">
+<div class="flex items-center gap-2 text-primary font-label-tag text-label-tag uppercase tracking-wide">
+<span class="material-symbols-outlined text-[16px]">calendar_today</span>
+<span>Sábado 1 Junio · 6:00 PM</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">Art &amp; Brews: Ilustración y Cerveza Lagunera</h3>
+<p class="font-body-md text-body-md text-on-surface-variant"> Aprende técnicas mixtas de trazo urbano con chela artesanal fría en mano guiado por ilustradores locales. Material incluido. </p>
+<div class="flex items-center justify-between pt-space-xs mt-space-xs">
+<span class="font-title-md text-title-md font-bold text-on-surface">$180 MXN</span>
+<button class="bg-surface-container-high text-on-surface font-label-md text-label-md px-4 py-2 rounded-full active:scale-95 transition-transform" type="button"> Inscribirme </button>
+</div>
+</div>
+</div> <div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<span class="inline-flex items-center gap-1 font-label-tag text-label-tag bg-secondary-fixed text-on-secondary-fixed px-2.5 py-1 rounded-full uppercase tracking-wider">
+<span class="material-symbols-outlined text-[14px]">sports_esports</span> Todos los Jueves </span>
+<span class="font-label-tag text-label-tag text-primary-container font-bold uppercase">Entrada Libre Estudiantes</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">Torneo de Acertijos: Escape Museum AR</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1"> Arma tu equipo de hasta 4 personas, escanea piezas con realidad aumentada y compite por premios en el rooftop. </p>
+</div>
+<div class="flex items-center justify-between pt-2">
+<span class="font-body-sm text-body-sm text-on-surface-variant">4:00 PM a 9:00 PM</span>
+<button class="bg-secondary text-on-secondary font-label-md text-label-md px-4 py-2 rounded-full active:scale-95 transition-transform" type="button"> Unirme al Torneo </button>
+</div>
+</div>
+</div>
+</section> <section class="flex flex-col px-margin mb-space-xl">
+<div class="bg-surface-container-low rounded-xl p-space-md shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[22px]">schedule</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-on-surface font-bold">Horarios Extendidos</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Jueves y Viernes hasta las 10:00 PM para noches jóvenes.</span>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[22px]">location_on</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-on-surface font-bold">Calle Cepeda 354, Centro Histórico</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Frente a la emblemática Plaza de Armas de Torreón.</span>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[22px]">percent</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-on-surface font-bold">Promoción Fija &lt;25 Años</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">50% de descuento diario en taquilla y gratis domingos.</span>
+</div>
+</div> <div class="w-full h-36 bg-cover bg-center rounded-lg shadow-sm" data-location="Museo Arocena, Cepeda 354, Centro Historico, Torreon, Coahuila, Mexico" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAFwFNbvo1WzkNxsFb5sPIDj_wA8lpi_oWPLmCivdOPO3GQVajDWGH-itHM84iFKzO_3vLulxrBEoV0YDb6ghxYodjdqYWK0ZhDMdK5yh2KQunGxI8BM2J19P4VctFQ5LOHFtMvLcDUJ3o9j1uKQZl_kykEnVu6U1-V9qE9PxaOvFsGPqVsdk_3z-rTmDPNs9CGs5u5Zl5kQ3yR-cOzKCpTEmQt0qh7w8cfBgSKAKU')"></div>
+</div>
+</section> <div class="px-margin mb-space-md">
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-md flex items-center justify-between gap-3 transition-all duration-300" id="voucher-box">
+<div class="flex items-center gap-3 min-w-0">
+<div class="w-11 h-11 rounded-full bg-tertiary-fixed flex-shrink-0 flex items-center justify-center text-on-tertiary-fixed-variant">
+<span class="material-symbols-outlined text-[24px]">coffee</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-tag text-label-tag text-primary-container font-extrabold uppercase tracking-wide">Cortesía de Bienvenida</span>
+<p class="font-body-sm text-body-sm text-on-surface truncate">Tu primera visita incluye café en Café Arocena.</p>
+</div>
+</div>
+<button class="whitespace-nowrap bg-primary-container text-on-primary font-label-md text-label-md px-3.5 py-2 rounded-full shadow-sm active:scale-95 transition-all" id="voucher-btn" type="button"> Canjear Pase </button>
+</div>
+</div>
+</div>
+<script> (function() { const voucherBtn = document.getElementById('voucher-btn'); const voucherBox = document.getElementById('voucher-box'); if (voucherBtn && voucherBox) { voucherBtn.addEventListener('click', function() { voucherBtn.textContent = '¡Pase Activo! ✓'; voucherBtn.classList.remove('bg-primary-container', 'text-on-primary'); voucherBtn.classList.add('bg-secondary', 'text-on-secondary'); const p = voucherBox.querySelector('p'); if (p) { p.textContent = 'Muestra este ticket en barra de Café Arocena.'; } }); } })();
+</script> </main> </div> <div id="view-eventos-noches" class="view-pane flex-1 hidden"> <main class="flex flex-col relative w-full pt-16 pb-24 bg-surface min-h-screen"> <div class="flex flex-col w-full pb-10"> <section class="w-full px-margin pt-2 pb-4">
+<div class="flex items-center gap-2 overflow-x-auto no-scrollbar py-1 -mx-margin px-margin">
+<button class="cat-pill active flex items-center gap-1.5 px-4 py-2 rounded-full font-label-lg text-label-lg whitespace-nowrap transition-transform active:scale-95 bg-on-surface text-surface shadow-sm" onclick="selectCategory(this, 'all')">
+<span>Todos</span>
+<span class="w-1.5 h-1.5 rounded-full bg-secondary-container"></span>
+</button>
+<button class="cat-pill flex items-center gap-1.5 px-4 py-2 rounded-full font-label-lg text-label-lg whitespace-nowrap transition-transform active:scale-95 bg-surface-container text-on-surface-variant shadow-sm" onclick="selectCategory(this, 'noches')">
+<span>🎉 Noches de Museo</span>
+</button>
+<button class="cat-pill flex items-center gap-1.5 px-4 py-2 rounded-full font-label-lg text-label-lg whitespace-nowrap transition-transform active:scale-95 bg-surface-container text-on-surface-variant shadow-sm" onclick="selectCategory(this, 'musica')">
+<span>🎵 Música en Vivo</span>
+</button>
+<button class="cat-pill flex items-center gap-1.5 px-4 py-2 rounded-full font-label-lg text-label-lg whitespace-nowrap transition-transform active:scale-95 bg-surface-container text-on-surface-variant shadow-sm" onclick="selectCategory(this, 'talleres')">
+<span>🎨 Talleres Creativos</span>
+</button>
+<button class="cat-pill flex items-center gap-1.5 px-4 py-2 rounded-full font-label-lg text-label-lg whitespace-nowrap transition-transform active:scale-95 bg-surface-container text-on-surface-variant shadow-sm" onclick="selectCategory(this, 'social')">
+<span>☕ Social &amp; Rooftop</span>
+</button>
+<button class="cat-pill flex items-center gap-1.5 px-4 py-2 rounded-full font-label-lg text-label-lg whitespace-nowrap transition-transform active:scale-95 bg-surface-container text-on-surface-variant shadow-sm" onclick="selectCategory(this, 'cine')">
+<span>🎬 Cine al Aire Libre</span>
+</button>
+</div>
+</section> <section class="px-margin pt-1 pb-3 flex items-baseline justify-between">
+<div>
+<span class="font-label-tag text-label-tag text-primary uppercase tracking-widest block mb-0.5">Torreón Nocturno</span>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface tracking-tight">Eventos &amp; Noches</h2>
+</div>
+<div class="flex items-center gap-1 text-on-surface-variant">
+<span class="font-label-md text-label-md">3 Próximos</span>
+</div>
+</section> <section class="px-margin mb-6">
+<div class="relative overflow-hidden rounded-xl bg-gradient-to-br from-primary via-primary-container to-tertiary text-on-primary p-5 shadow-xl"> <div class="absolute -top-12 -right-12 w-40 h-40 rounded-full bg-secondary/30 blur-2xl pointer-events-none"></div>
+<div class="absolute -bottom-8 -left-8 w-32 h-32 rounded-full bg-secondary-container/40 blur-xl pointer-events-none"></div>
+<div class="relative z-10 flex flex-col gap-3"> <div class="flex items-center justify-between">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface/20 backdrop-blur-md text-surface font-label-tag text-label-tag">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary-fixed opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-secondary-container"></span>
+</span> TODOS LOS JUEVES • 7:00 PM - 10:30 PM </div>
+<span class="material-symbols-outlined text-secondary-fixed text-xl">bolt</span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-surface tracking-tight leading-tight"> Jueves de Comunidad Joven </h3>
+<p class="font-body-md text-body-md text-on-primary-container mt-1"> Entrada 2x1 general para menores de 30 años + live sets de DJs laguneros en el Patio Central. Drinks de autor &amp; museos abiertos. </p>
+</div> <div class="flex items-center gap-4 pt-1">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-sm text-secondary-fixed">confirmation_number</span>
+<span class="font-label-md text-label-md text-surface">2x1 con ID</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-sm text-secondary-fixed">equalizer</span>
+<span class="font-label-md text-label-md text-surface">DJ Session Vivo</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-sm text-secondary-fixed">wine_bar</span>
+<span class="font-label-md text-label-md text-surface">Barra Arocena</span>
+</div>
+</div> <div class="pt-2 flex items-center justify-between">
+<div class="flex -space-x-2 overflow-hidden">
+<div class="inline-block h-7 w-7 rounded-full bg-secondary text-surface text-center font-label-tag text-label-tag leading-7">LV</div>
+<div class="inline-block h-7 w-7 rounded-full bg-surface-container text-on-surface text-center font-label-tag text-label-tag leading-7">MG</div>
+<div class="inline-block h-7 w-7 rounded-full bg-on-tertiary-fixed text-on-tertiary text-center font-label-tag text-label-tag leading-7">+42</div>
+</div>
+<button class="px-4 py-2 rounded-full bg-surface text-primary font-label-lg text-label-lg shadow-md hover:bg-surface-container-low transition-transform active:scale-95 flex items-center gap-1.5" onclick="toggleQuickRSVP(this)">
+<span class="material-symbols-outlined text-sm">notifications_active</span>
+<span>Anotarme en lista</span>
+</button>
+</div>
+</div>
+</div>
+</section> <section class="px-margin flex flex-col gap-6"> <article class="event-card relative bg-surface-container-lowest rounded-xl overflow-hidden shadow-lg flex flex-col transition-all duration-300" data-category="noches musica"> <div class="relative w-full h-56 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Vibrant youth silent disco dance party inside historic neo-classical courtyard of Museo Arocena in Torreón Coahuila at night. Multi-colored glowing wireless neon cyan and electric coral LED headphones worn by stylish young adults, warm architectural terracotta stone pillars lit by atmospheric magenta floodlights, energetic candid mood, editorial quality." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9b7-bnXO_rw8kKqy_MvaAsCdj-PNdq9_o_1-X7tHLhQRX2xCttvpeGDjS4nDbV-66-JzjRjMTGbM-94Gc0TcAAscziXnYocZTd_wASGdWLzNf_Yhgyfp8_QnRPvjIFteWj0PP4QTrsf9Oqg3IYNC9yvP43i3am9INB5yR1uZo2FyflRADpzEvHL8RhhKG1nd9GJxV6wMMOSe2wYJlWt9JFR_F7Ljs1G22_NF_mCY"/>
+<div class="absolute inset-0 bg-gradient-to-t from-on-surface via-on-surface/40 to-transparent"></div> <div class="absolute top-3 left-3 flex items-center gap-2">
+<span class="px-2.5 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-tag text-label-tag uppercase tracking-wider shadow-md"> Destacado </span>
+<span class="px-2.5 py-1 rounded-full bg-surface/90 backdrop-blur-md text-on-surface font-label-tag text-label-tag"> Cupo Limitado </span>
+</div> <button class="absolute top-3 right-3 w-10 h-10 rounded-full bg-surface/80 backdrop-blur-md text-on-surface flex items-center justify-center transition-transform active:scale-90 hover:bg-surface" onclick="toggleBookmark(this)">
+<span class="material-symbols-outlined text-[20px]">bookmark_border</span>
+</button> <div class="absolute bottom-3 left-3 right-3 flex items-end justify-between">
+<div class="flex items-center gap-2">
+<div class="px-2.5 py-1 rounded-lg bg-primary-container text-on-primary-container font-label-tag text-label-tag flex flex-col items-center leading-none">
+<span>VIE</span>
+<span class="text-sm font-bold mt-0.5">31</span>
+</div>
+<div class="text-surface drop-shadow-sm">
+<span class="font-label-md text-label-md block">Mayo 2025 • 8:30 PM</span>
+<span class="font-body-sm text-body-sm text-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">location_on</span> Patio Posada &amp; Contemporánea </span>
+</div>
+</div>
+<span class="px-3 py-1 rounded-full bg-surface-container-lowest/90 backdrop-blur-md text-on-surface font-headline-sm text-headline-sm"> $80 <span class="font-label-tag text-label-tag text-on-surface-variant">MXN</span>
+</span>
+</div>
+</div> <div class="p-4 flex flex-col gap-3">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface"> Noche de Galería &amp; Silent Disco </h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1.5 leading-relaxed"> 3 canales inalámbricos con DJs en simultáneo (Canal 1: Indie Rock &amp; Post-Punk, Canal 2: Synthwave / House, Canal 3: R&amp;B Latino). Incluye 1 coctel de cortesía y acceso libre a las exposiciones nocturnas. </p>
+</div> <div class="flex items-center gap-2 px-3 py-2 rounded-lg bg-surface-container-high text-on-surface">
+<span class="material-symbols-outlined text-primary text-base">school</span>
+<span class="font-body-sm text-body-sm"> Precio especial estudiantes: <strong class="text-primary font-semibold">$50 MXN</strong> mostrando credencial vigente en taquilla. </span>
+</div> <div class="flex items-center gap-2 flex-wrap">
+<span class="px-2 py-0.5 rounded-full bg-error-container text-on-error-container font-label-tag text-label-tag">🔴 Ch 1: Indie Rock</span>
+<span class="px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-tag text-label-tag">🔵 Ch 2: Synth / House</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-highest text-on-surface-variant font-label-tag text-label-tag">🟢 Ch 3: Latin R&amp;B</span>
+</div> <div class="grid grid-cols-2 gap-2 pt-2">
+<button class="w-full py-3 rounded-full bg-primary text-on-primary font-label-lg text-label-lg tracking-wide transition-transform active:scale-95 shadow-md flex items-center justify-center gap-1.5" onclick="rsvpEvent(this, 'Noche de Galería &amp; Silent Disco')">
+<span class="material-symbols-outlined text-sm">confirmation_number</span>
+<span>Apartar Lugar</span>
+</button>
+<button class="w-full py-3 rounded-full bg-surface-container text-on-surface font-label-lg text-label-lg transition-transform active:scale-95 flex items-center justify-center gap-1.5 hover:bg-surface-container-high" onclick="shareEvent('Noche de Galería &amp; Silent Disco en Museo Arocena')">
+<span class="material-symbols-outlined text-sm">share</span>
+<span>Invitar Amigos</span>
+</button>
+</div>
+</div>
+</article> <article class="event-card relative bg-surface-container-lowest rounded-xl overflow-hidden shadow-lg flex flex-col transition-all duration-300" data-category="talleres">
+<div class="relative w-full h-52 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Close up top-down view of a stylish creative youth sneaker customization art workshop at Museo Arocena in Torreón Mexico. White leather retro sneakers being hand painted with acrylic markers and graffiti stencils, vibrant acrylic jars, brushes, design sketches in terracotta studio warm daylight, hands of young Mexican streetwear artists." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJwfuJiyFAfshQ7pa-z4vxsTIQ0RCh7T9q7w_U31iK9_B-xHf5TwTf7rUAG9cgmZbCRRWYBdAWPGX_28mboIsTpKuCmr6sIGLXytBI4z2yPntms2sK2W7HFk8r3c3ihWC7En0MU1G77rda1p2wsgBibFnxusk73lFdTkbsEr-3UPfFTA97pcSM8EmtLgNonOOFqmPZC8cSEPWSSrbMo7Nk9wxgQhKtn4Hw2nZ8KWc"/>
+<div class="absolute inset-0 bg-gradient-to-t from-on-surface via-on-surface/40 to-transparent"></div> <div class="absolute top-3 left-3 flex items-center gap-2">
+<span class="px-2.5 py-1 rounded-full bg-primary text-on-primary font-label-tag text-label-tag uppercase tracking-wider"> Taller Práctico </span>
+<span class="px-2.5 py-1 rounded-full bg-surface/90 backdrop-blur-md text-on-surface font-label-tag text-label-tag"> Solo 15 plazas </span>
+</div> <button class="absolute top-3 right-3 w-10 h-10 rounded-full bg-surface/80 backdrop-blur-md text-on-surface flex items-center justify-center transition-transform active:scale-90 hover:bg-surface" onclick="toggleBookmark(this)">
+<span class="material-symbols-outlined text-[20px]">bookmark_border</span>
+</button>
+<div class="absolute bottom-3 left-3 right-3 flex items-end justify-between">
+<div class="flex items-center gap-2">
+<div class="px-2.5 py-1 rounded-lg bg-primary-container text-on-primary-container font-label-tag text-label-tag flex flex-col items-center leading-none">
+<span>SÁB</span>
+<span class="text-sm font-bold mt-0.5">08</span>
+</div>
+<div class="text-surface drop-shadow-sm">
+<span class="font-label-md text-label-md block">Junio 2025 • 5:00 PM</span>
+<span class="font-body-sm text-body-sm text-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">storefront</span> Taller Educativo Arocena </span>
+</div>
+</div>
+<span class="px-3 py-1 rounded-full bg-surface-container-lowest/90 backdrop-blur-md text-on-surface font-headline-sm text-headline-sm"> $180 <span class="font-label-tag text-label-tag text-on-surface-variant">MXN</span>
+</span>
+</div>
+</div>
+<div class="p-4 flex flex-col gap-3">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface"> Taller Creativo: Custom Sneakers &amp; Street Art </h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1.5 leading-relaxed"> Aprende técnicas profesionales de diseño, plantillas y pintura permanente sobre calzado con el artista lagunero <strong class="text-secondary font-medium">@TorreonGraff</strong>. Trae tus tenis favoritos o prenda de mezclilla; te entregamos kit de acrílicos y selladores especiales. </p>
+</div> <div class="flex items-center gap-2 text-on-surface-variant font-label-md text-label-md">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-secondary text-sm">palette</span> Kit incluido </span>
+<span>•</span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-secondary text-sm">schedule</span> 3 horas </span>
+<span>•</span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-secondary text-sm">verified</span> Nivel inicial </span>
+</div>
+<div class="grid grid-cols-2 gap-2 pt-2">
+<button class="w-full py-3 rounded-full bg-secondary text-on-secondary font-label-lg text-label-lg tracking-wide transition-transform active:scale-95 shadow-md flex items-center justify-center gap-1.5" onclick="rsvpEvent(this, 'Taller Custom Sneakers')">
+<span class="material-symbols-outlined text-sm">brush</span>
+<span>Reservar Kit</span>
+</button>
+<button class="w-full py-3 rounded-full bg-surface-container text-on-surface font-label-lg text-label-lg transition-transform active:scale-95 flex items-center justify-center gap-1.5 hover:bg-surface-container-high" onclick="shareEvent('Taller Custom Sneakers &amp; Street Art en Museo Arocena')">
+<span class="material-symbols-outlined text-sm">share</span>
+<span>Compartir</span>
+</button>
+</div>
+</div>
+</article> <article class="event-card relative bg-surface-container-lowest rounded-xl overflow-hidden shadow-lg flex flex-col transition-all duration-300" data-category="cine social">
+<div class="relative w-full h-52 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Outdoor rooftop open-air night cinema on the modern architectural rooftop of Museo Arocena overlooking the historic Plaza de Armas and illuminated Torreón cathedral. Large projection screen showing cinematic indie film, cozy beanbags, fairy lights, young Mexican couples and friend groups laughing with popcorn bags, dark blue twilight sky with stars." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCTosmEdwWW0Rc5WjGG1SVfDq-VX-zuVo6oFPpnsy3_txFvp5qBYOw8cYWoYBRLCOXQFyy72NrW17J8h00l-13VkazwY46oWKRsEUC7m6jyJdtAABFvgNt8f9EnxN71igfBeH4hnxae3y84vESrGVipzMvUzZ12voRSq9Kd9Qm_JQ27HWHQJqYCETEUNJAnZ6141z0I3xhsctdBt-64D_Ah-BJrKbYZmkLw7UISYLo"/>
+<div class="absolute inset-0 bg-gradient-to-t from-on-surface via-on-surface/40 to-transparent"></div>
+<div class="absolute top-3 left-3 flex items-center gap-2">
+<span class="px-2.5 py-1 rounded-full bg-on-tertiary-fixed text-on-tertiary font-label-tag text-label-tag uppercase tracking-wider"> Aire Libre </span>
+<span class="px-2.5 py-1 rounded-full bg-surface-container-highest text-on-surface font-label-tag text-label-tag"> Entrada Libre </span>
+</div> <button class="absolute top-3 right-3 w-10 h-10 rounded-full bg-surface/80 backdrop-blur-md text-on-surface flex items-center justify-center transition-transform active:scale-90 hover:bg-surface" onclick="toggleBookmark(this)">
+<span class="material-symbols-outlined text-[20px]">bookmark_border</span>
+</button>
+<div class="absolute bottom-3 left-3 right-3 flex items-end justify-between">
+<div class="flex items-center gap-2">
+<div class="px-2.5 py-1 rounded-lg bg-primary-container text-on-primary-container font-label-tag text-label-tag flex flex-col items-center leading-none">
+<span>MIÉ</span>
+<span class="text-sm font-bold mt-0.5">12</span>
+</div>
+<div class="text-surface drop-shadow-sm">
+<span class="font-label-md text-label-md block">Junio 2025 • 7:30 PM</span>
+<span class="font-body-sm text-body-sm text-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">deck</span> Terraza Mirador (Plaza de Armas) </span>
+</div>
+</div>
+<span class="px-3 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed font-headline-sm text-headline-sm"> GRATIS </span>
+</div>
+</div>
+<div class="p-4 flex flex-col gap-3">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface"> Cine Bajo Las Estrellas: Joyas Indie &amp; Palomitas </h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1.5 leading-relaxed"> Ciclo especial de cortometrajes independientes rodados en el norte de México, seguido de una charla horizontal con directores universitarios locales. Palomitas de cortesía a los primeros 40 en llegar. </p>
+</div>
+<div class="p-3 rounded-lg bg-surface-container flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-xl">oil_barrel</span>
+<span class="font-body-sm text-body-sm text-on-surface">Cooperación voluntaria sugerida</span>
+</div>
+<span class="font-label-tag text-label-tag uppercase tracking-wider text-primary font-bold">Rooftop Bar</span>
+</div>
+<div class="grid grid-cols-2 gap-2 pt-2">
+<button class="w-full py-3 rounded-full bg-primary text-on-primary font-label-lg text-label-lg tracking-wide transition-transform active:scale-95 shadow-md flex items-center justify-center gap-1.5" onclick="rsvpEvent(this, 'Cine Bajo Las Estrellas')">
+<span class="material-symbols-outlined text-sm">how_to_reg</span>
+<span>Anotar Asistencia</span>
+</button>
+<button class="w-full py-3 rounded-full bg-surface-container text-on-surface font-label-lg text-label-lg transition-transform active:scale-95 flex items-center justify-center gap-1.5 hover:bg-surface-container-high" onclick="shareEvent('Cine Bajo las Estrellas en Terraza Arocena')">
+<span class="material-symbols-outlined text-sm">share</span>
+<span>Invitar</span>
+</button>
+</div>
+</div>
+</article>
+</section> <section class="px-margin mt-8">
+<div class="relative overflow-hidden rounded-xl bg-surface-container-high p-5 flex flex-col gap-4 shadow-md"> <div class="absolute top-0 right-0 -mr-6 -mt-6 w-28 h-28 rounded-full bg-primary-fixed opacity-60 pointer-events-none"></div>
+<div class="relative z-10 flex items-start gap-3">
+<div class="w-12 h-12 rounded-xl bg-primary text-on-primary flex-shrink-0 flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-2xl">campaign</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-tag text-label-tag text-primary uppercase tracking-wider">Convocatoria Abierta</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface leading-tight mt-0.5"> Crea tu Propio Parche / Co-crea con el Arocena </h3>
+</div>
+</div>
+<p class="relative z-10 font-body-md text-body-md text-on-surface-variant"> ¿Tienes una banda, proyecto de diseño textil, podcast o colectivo universitario en Torreón, Gómez Palacio o Lerdo? Las salas, patios y azotea del museo son tu plataforma. </p>
+<div class="relative z-10 grid grid-cols-2 gap-2 text-on-surface-variant font-label-md text-label-md">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-sm text-secondary">check_circle</span>
+<span>Espacios sin costo</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-sm text-secondary">check_circle</span>
+<span>Difusión en redes</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-sm text-secondary">check_circle</span>
+<span>Audio y técnica libre</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-sm text-secondary">check_circle</span>
+<span>Venta de merch oficial</span>
+</div>
+</div>
+<div class="relative z-10 pt-1">
+<button class="w-full py-3.5 rounded-full bg-on-surface text-surface font-label-lg text-label-lg tracking-wide transition-transform active:scale-95 shadow-md flex items-center justify-center gap-2 hover:bg-surface-dim" onclick="openCoCreationModal()">
+<span class="material-symbols-outlined text-sm">rocket_launch</span>
+<span>Postular Mi Proyecto</span>
+</button>
+</div>
+</div>
+</section> <footer class="px-margin mt-8 text-center flex flex-col items-center gap-2 text-on-surface-variant">
+<div class="flex items-center justify-center gap-2 font-label-md text-label-md">
+<span class="material-symbols-outlined text-base text-primary">diversity_3</span>
+<span>Espacio seguro, inclusivo y libre de discriminación</span>
+</div>
+<p class="font-body-sm text-body-sm text-outline max-w-xs"> Museo Arocena • Calle Cepeda 354, Centro Histórico de Torreón. Estacionamiento vigilado disponible sobre Av. Hidalgo. </p>
+</footer> <div class="fixed bottom-20 left-1/2 -translate-x-1/2 z-50 pointer-events-none opacity-0 transition-opacity duration-300 px-4 py-2.5 rounded-full bg-on-surface/95 text-surface font-label-md text-label-md shadow-xl flex items-center gap-2 backdrop-blur-md" id="actionToast">
+<span class="material-symbols-outlined text-sm text-secondary-fixed-dim" id="toastIcon">check_circle</span>
+<span id="toastMsg">Acción completada</span>
+</div> <div class="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm hidden items-end justify-center p-0 transition-opacity" id="proposalModal">
+<div class="bg-surface w-full max-w-lg rounded-t-2xl p-6 shadow-2xl flex flex-col gap-4 max-h-[751px] overflow-y-auto">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-xl">palette</span>
+<h4 class="font-headline-sm text-headline-sm text-on-surface">Postular Propuesta</h4>
+</div>
+<button class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface" onclick="closeCoCreationModal()">
+<span class="material-symbols-outlined text-base">close</span>
+</button>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant"> Déjanos tus datos y la descripción básica de tu proyecto (música, performance, taller, feria). El equipo de curaduría joven te contacta en menos de 48 hrs. </p>
+<div class="flex flex-col gap-3">
+<div>
+<label class="font-label-md text-label-md text-on-surface block mb-1">Nombre del Colectivo / Artista</label>
+<input class="w-full px-4 py-3 rounded-lg bg-surface-container-lowest text-on-surface font-body-md text-body-md focus:outline-none focus:ring-2 focus:ring-secondary" placeholder="Ej. Colectivo Nazas Wave" type="text"/>
+</div>
+<div>
+<label class="font-label-md text-label-md text-on-surface block mb-1">Instagram o Link a tu trabajo</label>
+<input class="w-full px-4 py-3 rounded-lg bg-surface-container-lowest text-on-surface font-body-md text-body-md focus:outline-none focus:ring-2 focus:ring-secondary" placeholder="@tu_cuenta o Spotify link" type="text"/>
+</div>
+<div>
+<label class="font-label-md text-label-md text-on-surface block mb-1">Tipo de Actividad Propuesta</label>
+<select class="w-full px-4 py-3 rounded-lg bg-surface-container-lowest text-on-surface font-body-md text-body-md focus:outline-none focus:ring-2 focus:ring-secondary">
+<option>Música en Vivo / DJ Set</option>
+<option>Taller Creativo / Charla</option>
+<option>Proyección / Cineclub</option>
+<option>Feria de Diseño / Fanzine</option>
+<option>Otro Formato Híbrido</option>
+</select>
+</div>
+<div>
+<label class="font-label-md text-label-md text-on-surface block mb-1">Breve Resumen de la Idea</label>
+<textarea class="w-full px-4 py-3 rounded-lg bg-surface-container-lowest text-on-surface font-body-md text-body-md focus:outline-none focus:ring-2 focus:ring-secondary resize-none" placeholder="¿Qué te gustaría armar en el patio o terraza del Arocena?" rows="3"></textarea>
+</div>
+</div>
+<div class="pt-2">
+<button class="w-full py-3.5 rounded-full bg-primary text-on-primary font-label-lg text-label-lg tracking-wide shadow-md transition-transform active:scale-95 flex items-center justify-center gap-2" onclick="submitProposal()">
+<span class="material-symbols-outlined text-sm">send</span>
+<span>Enviar Propuesta al Museo</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<script> function showToast(message, icon = 'check_circle') { const toast = document.getElementById('actionToast'); const toastMsg = document.getElementById('toastMsg'); const toastIcon = document.getElementById('toastIcon'); if (!toast || !toastMsg) return; toastMsg.textContent = message; if (toastIcon) toastIcon.textContent = icon; toast.classList.remove('opacity-0'); toast.classList.add('opacity-100'); setTimeout(() => { toast.classList.remove('opacity-100'); toast.classList.add('opacity-0'); }, 2400); } function selectCategory(btn, category) { const pills = document.querySelectorAll('.cat-pill'); pills.forEach(p => { p.classList.remove('bg-on-surface', 'text-surface'); p.classList.add('bg-surface-container', 'text-on-surface-variant'); }); btn.classList.remove('bg-surface-container', 'text-on-surface-variant'); btn.classList.add('bg-on-surface', 'text-surface'); const cards = document.querySelectorAll('.event-card'); cards.forEach(card => { const cats = card.getAttribute('data-category') || ''; if (category === 'all' || cats.includes(category)) { card.style.display = 'flex'; } else { card.style.display = 'none'; } }); showToast(`Filtrado por: ${btn.textContent.trim()}`, 'tune'); } function toggleBookmark(btn) { const icon = btn.querySelector('.material-symbols-outlined'); if (icon.textContent === 'bookmark_border') { icon.textContent = 'bookmark'; btn.classList.add('text-primary'); showToast('Guardado en tus eventos guardados', 'bookmark'); } else { icon.textContent = 'bookmark_border'; btn.classList.remove('text-primary'); showToast('Eliminado de tus guardados', 'bookmark_border'); } } function toggleQuickRSVP(btn) { const textSpan = btn.querySelector('span:last-child'); if (textSpan.textContent === 'Anotarme en lista') { textSpan.textContent = '¡En Lista! (2x1)'; btn.classList.remove('bg-surface', 'text-primary'); btn.classList.add('bg-secondary-container', 'text-on-secondary-container'); showToast('¡Listo para el Jueves Joven! Lleva tu ID', 'celebration'); } else { textSpan.textContent = 'Anotarme en lista'; btn.classList.add('bg-surface', 'text-primary'); btn.classList.remove('bg-secondary-container', 'text-on-secondary-container'); showToast('Te quitaste de la lista', 'cancel'); } } function rsvpEvent(btn, title) { const span = btn.querySelector('span:last-child'); const originalText = span.textContent; span.textContent = '¡Lugar Reservado!'; btn.classList.remove('bg-primary', 'bg-secondary'); btn.classList.add('bg-on-surface', 'text-surface'); showToast(`Registrado con éxito: ${title}`, 'local_activity'); } function shareEvent(title) { if (navigator.share) { navigator.share({ title: title, text: '¡Vamos al Arocena! Hay plan con música, talleres y cheve.', url: window.location.href, }).catch(() => {}); } else { showToast('Enlace del evento copiado al portapapeles', 'link'); } } function openCoCreationModal() { const modal = document.getElementById('proposalModal'); if (modal) { modal.classList.remove('hidden'); modal.classList.add('flex'); } } function closeCoCreationModal() { const modal = document.getElementById('proposalModal'); if (modal) { modal.classList.add('hidden'); modal.classList.remove('flex'); } } function submitProposal() { closeCoCreationModal(); showToast('¡Propuesta recibida! Te escribiremos muy pronto.', 'favorite'); }
+</script> </main> </div> <div id="view-pistas-ar" class="view-pane flex-1 hidden"> <main class="flex flex-col relative w-full pt-16 pb-24 bg-surface min-h-screen"> <div class="flex flex-col w-full pb-10"> <div class="px-margin pt-space-sm">
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-[0_8px_24px_-6px_rgba(27,27,29,0.06)] relative overflow-hidden"> <div class="absolute -right-10 -top-10 w-36 h-36 bg-gradient-to-br from-secondary/15 via-primary/10 to-transparent rounded-full blur-2xl pointer-events-none"></div>
+<div class="flex items-center justify-between mb-space-sm relative z-10">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-secondary/10 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[22px]" style="font-variation-settings: 'FILL' 1;">military_tech</span>
+</div>
+<div>
+<div class="flex items-center gap-1.5">
+<span class="font-headline-sm text-headline-sm text-on-surface">420 XP</span>
+<span class="font-label-tag text-label-tag px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed uppercase tracking-wider">Nivel 3</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant font-medium">Explorador Lagunero</p>
+</div>
+</div>
+<button class="flex items-center gap-1 px-3 py-1.5 rounded-full bg-surface-container-high text-on-surface hover:bg-secondary hover:text-on-secondary transition-all" id="reward-chip-btn">
+<span class="material-symbols-outlined text-[16px] text-tertiary" style="font-variation-settings: 'FILL' 1;">redeem</span>
+<span class="font-label-tag text-label-tag">2 Canjes</span>
+</button>
+</div> <div class="space-y-1.5 relative z-10 pt-1">
+<div class="flex justify-between items-center text-on-surface-variant">
+<span class="font-label-tag text-label-tag flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-secondary">local_cafe</span> Café Frío Gratis en Café Arocena </span>
+<span class="font-label-tag text-label-tag font-bold text-secondary">80 XP faltantes</span>
+</div>
+<div class="w-full h-2.5 rounded-full bg-surface-container overflow-hidden p-0.5">
+<div class="h-full bg-gradient-to-r from-secondary-container via-secondary to-primary-container rounded-full transition-all duration-700 ease-out" style="width: 84%;"></div>
+</div>
+</div>
+</div>
+</div> <div class="px-margin mt-space-md">
+<div class="relative overflow-hidden rounded-xl bg-gradient-to-br from-primary via-primary-container to-tertiary text-on-primary p-space-md shadow-[0_12px_32px_-8px_rgba(184,58,36,0.28)]">
+<div class="flex items-start justify-between relative z-10">
+<div class="max-w-[70%]">
+<div class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-surface-container-lowest/20 backdrop-blur-md text-on-primary mb-2">
+<span class="w-2 h-2 rounded-full bg-secondary-fixed animate-ping"></span>
+<span class="font-label-tag text-label-tag uppercase tracking-wider">Escáner Activo</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-primary font-bold leading-tight">Escaneo In Situ</h2>
+<p class="font-body-sm text-body-sm text-on-primary/90 mt-1">Apunta tu cámara a cualquier pieza, placa o código QR de la sala para desbloquear contenido oculto.</p>
+</div>
+<button aria-label="Abrir cámara AR" class="w-14 h-14 rounded-full bg-surface-container-lowest text-primary shadow-lg flex items-center justify-center transform active:scale-95 transition-transform hover:bg-surface-container-low" id="open-ar-scanner">
+<span class="material-symbols-outlined text-[30px]" style="font-variation-settings: 'FILL' 1;">qr_code_scanner</span>
+</button>
+</div>
+<div class="mt-space-md pt-3 flex items-center justify-between text-on-primary/80 relative z-10">
+<span class="font-label-tag text-label-tag flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">sensors</span> Sala 3: Arte Virreinal </span>
+<button class="font-label-tag text-label-tag underline decoration-secondary-fixed underline-offset-4 text-on-primary flex items-center gap-0.5 hover:text-secondary-fixed" id="btn-quick-hint"> ¿Cómo jugar? <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</div> <div class="mt-space-xl">
+<div class="px-margin flex items-center justify-between mb-space-sm">
+<div>
+<span class="font-label-tag text-label-tag text-secondary uppercase tracking-widest">Gamificación Cultural</span>
+<h3 class="font-headline-md text-headline-md text-on-surface">Retos Disponibles</h3>
+</div>
+<div class="flex items-center gap-1 bg-surface-container-high px-2 py-1 rounded-full text-on-surface-variant font-label-tag text-label-tag">
+<span class="material-symbols-outlined text-[14px]">bolt</span> 3 Hoy </div>
+</div> <div class="flex flex-col gap-space-md px-margin"> <article class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-[0_4px_20px_rgba(27,27,29,0.04)] flex flex-col">
+<div class="relative w-full h-44">
+<img class="w-full h-full object-cover" data-alt="Intricate Spanish colonial silver craftsmanship and classical oil painting of an aristocrat in warm dramatic museum spotlight, high resolution museum photography" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0fLnbYM9pdBbAaR-f3-an2YyOyrQt-3ZUIcDGKcQud-Ca63VKyOjvPGSi5YbBL7tHxxXAm1Q-R6zHOswjR0ood2y4H6Bs4hzvLj2jfAV-RzGHTAAb7GsSj9kwu284eoQeGanYySoZEECGTLPQ6ruUQcmhZypoX7vMHA8ws3LeOjnqXb8x9zJNoXMow2rH7YB53zhyz7anu48J6bMp6WZZ8ZmuOAVyJNzTF2fVBJY"/>
+<div class="absolute inset-0 bg-gradient-to-t from-on-surface via-transparent to-black/30"></div>
+<div class="absolute top-3 left-3 flex gap-1.5 flex-wrap">
+<span class="px-2.5 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-tag text-label-tag flex items-center gap-1 backdrop-blur-md">
+<span class="material-symbols-outlined text-[13px]">view_in_ar</span> AR </span>
+<span class="px-2.5 py-1 rounded-full bg-surface-container-lowest/90 text-on-surface font-label-tag text-label-tag backdrop-blur-md"> 25 min </span>
+</div>
+<div class="absolute top-3 right-3">
+<span class="px-2.5 py-1 rounded-full bg-primary text-on-primary font-label-tag text-label-tag shadow-md flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">stars</span> +150 XP </span>
+</div>
+<div class="absolute bottom-3 left-3 right-3 text-surface-container-lowest">
+<span class="font-label-tag text-label-tag text-secondary-fixed uppercase tracking-wider">Misión Destacada</span>
+<h4 class="font-title-md text-title-md text-surface-container-lowest font-bold">El Misterio de la Dama Virreinal</h4>
+</div>
+</div>
+<div class="p-space-md flex flex-col justify-between">
+<p class="font-body-md text-body-md text-on-surface-variant"> Encuentra los 4 símbolos ocultos en la colección de plata y pintura virreinal usando el visor de realidad aumentada. </p> <div class="mt-space-md p-space-sm rounded-lg bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="flex -space-x-1.5">
+<span class="w-6 h-6 rounded-full bg-primary text-on-primary font-label-tag text-label-tag flex items-center justify-center">1</span>
+<span class="w-6 h-6 rounded-full bg-primary text-on-primary font-label-tag text-label-tag flex items-center justify-center">2</span>
+<span class="w-6 h-6 rounded-full bg-surface-container-highest text-on-surface-variant font-label-tag text-label-tag flex items-center justify-center">3</span>
+<span class="w-6 h-6 rounded-full bg-surface-container-highest text-on-surface-variant font-label-tag text-label-tag flex items-center justify-center">4</span>
+</div>
+<span class="font-label-tag text-label-tag text-on-surface-variant">2 de 4 pistas reveladas</span>
+</div>
+<span class="material-symbols-outlined text-secondary text-[20px]">check_circle</span>
+</div>
+<div class="mt-space-md pt-1">
+<button class="w-full flex items-center justify-center gap-2 py-3 px-space-md rounded-full bg-primary text-on-primary font-label-lg text-label-lg active:scale-[0.98] transition-all shadow-md hover:bg-primary-container" id="btn-start-quest-1">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">camera</span> Reanudar Búsqueda AR </button>
+</div>
+</div>
+</article> <article class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-[0_4px_20px_rgba(27,27,29,0.04)] flex flex-col">
+<div class="relative w-full h-36">
+<img class="w-full h-full object-cover" data-alt="Chic young museum visitors posing artistically near classical marble arches and sculptures in sunlit historic building in Mexico, warm daylight cinematic photography" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBYydt0JmS2qZ2WS9yBnswcrIQkwLkN9ufjJsJrb36G0GKkduxQNH5uNRtMRwVLJSL6o2IbUeUNb7-RD5cpsN0rUlPkDO3kl6Ub9f-Ssi_EhiEUUZL8KU16Lr8x9NKpS9UIcKNheIBOnWK7N1pGb-ajm5fFbufR92ycIF5kHK7G6-QVd5RnKQCDTRkmEw0FdBu_xp4nYa9QNbG8j2oZ6U4VfMi73W3uoVehEZgKJaw"/>
+<div class="absolute inset-0 bg-gradient-to-t from-on-surface via-transparent to-black/20"></div>
+<div class="absolute top-3 left-3 flex gap-1.5">
+<span class="px-2.5 py-1 rounded-full bg-surface-container-lowest/90 text-on-surface font-label-tag text-label-tag"> Foto Challenge • 15 min </span>
+</div>
+<div class="absolute top-3 right-3">
+<span class="px-2.5 py-1 rounded-full bg-secondary text-on-secondary font-label-tag text-label-tag shadow-md flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">stars</span> +100 XP </span>
+</div>
+<div class="absolute bottom-3 left-3 right-3 text-surface-container-lowest">
+<h4 class="font-title-md text-title-md text-surface-container-lowest font-bold">Ruta Aesthetic: Los 5 Ángulos de Torreón</h4>
+</div>
+</div>
+<div class="p-space-md">
+<p class="font-body-md text-body-md text-on-surface-variant"> Recrea 5 poses fotográficas inspiradas en la arquitectura ecléctica del edificio y comparte tu visión en redes usando <span class="font-semibold text-secondary">#ArocenaAesthetic</span>. </p>
+<div class="mt-space-md flex items-center justify-between">
+<div class="flex items-center gap-1 text-on-surface-variant font-label-tag text-label-tag">
+<span class="material-symbols-outlined text-[16px] text-tertiary">photo_camera</span> 0/5 Poses capturadas </div>
+<button class="px-space-md py-2.5 rounded-full bg-surface-container-high text-on-surface font-label-md text-label-md hover:bg-secondary-fixed hover:text-on-secondary-fixed transition-colors" id="btn-start-quest-2"> Ver Puntos de Foto </button>
+</div>
+</div>
+</article> <article class="bg-surface-container-lowest rounded-xl p-space-md shadow-[0_4px_20px_rgba(27,27,29,0.04)] relative">
+<div class="flex items-start justify-between">
+<div class="flex gap-2 items-center">
+<span class="w-10 h-10 rounded-full bg-tertiary-fixed text-on-tertiary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">groups</span>
+</span>
+<div>
+<span class="font-label-tag text-label-tag text-tertiary uppercase tracking-wider">Multijugador Express</span>
+<h4 class="font-title-md text-title-md text-on-surface font-bold">Batalla de Épocas: La Laguna</h4>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-tag text-label-tag"> +80 XP </span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mt-3"> Compite cara a cara en tu teléfono contra tus amigos respondiendo 6 preguntas rápidas sobre el auge algodonero y los secretos del edificio Arocena. </p>
+<div class="mt-space-md pt-space-xs flex items-center justify-between">
+<div class="flex items-center gap-1 text-on-surface-variant font-label-tag text-label-tag">
+<span class="material-symbols-outlined text-[16px] text-secondary">timer</span> 10 min • 2 a 4 jugadores </div>
+<button class="px-space-md py-2 rounded-full bg-secondary text-on-secondary font-label-md text-label-md active:scale-95 transition-transform" id="btn-start-quest-3"> Crear Sala </button>
+</div>
+</article>
+</div>
+</div> <div class="mt-space-xl px-margin">
+<div class="flex items-center justify-between mb-space-sm">
+<div>
+<span class="font-label-tag text-label-tag text-primary uppercase tracking-widest">Tus Logros</span>
+<h3 class="font-headline-md text-headline-md text-on-surface">Recompensas Reales</h3>
+</div>
+<span class="font-label-tag text-label-tag text-on-surface-variant font-medium">Torreón, Coahuila</span>
+</div> <div class="flex flex-col gap-space-sm"> <div class="bg-surface-container-lowest p-space-md rounded-xl shadow-[0_2px_12px_rgba(27,27,29,0.04)] flex items-center justify-between gap-space-sm">
+<div class="w-12 h-12 rounded-xl bg-surface-container flex-shrink-0 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[26px]">shopping_bag</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-title-md text-title-md text-on-surface font-semibold truncate">50% off en Tienda Arocena</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">Válido en tote bags de diseño y catálogo local</p>
+<span class="font-label-tag text-label-tag text-secondary font-bold inline-block mt-0.5">Desbloqueado (300 XP)</span>
+</div>
+<button class="px-3 py-2 rounded-full bg-secondary-container text-on-secondary-container font-label-tag text-label-tag font-bold whitespace-nowrap active:scale-95 transition-transform"> Canjear </button>
+</div> <div class="bg-surface-container-lowest p-space-md rounded-xl shadow-[0_2px_12px_rgba(27,27,29,0.04)] flex items-center justify-between gap-space-sm">
+<div class="w-12 h-12 rounded-xl bg-surface-container flex-shrink-0 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[26px]">local_bar</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-title-md text-title-md text-on-surface font-semibold truncate">Cortesía Noche de Museo</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">1 bebida artesanal en la terraza exterior</p>
+<span class="font-label-tag text-label-tag text-secondary font-bold inline-block mt-0.5">Desbloqueado (400 XP)</span>
+</div>
+<button class="px-3 py-2 rounded-full bg-secondary-container text-on-secondary-container font-label-tag text-label-tag font-bold whitespace-nowrap active:scale-95 transition-transform"> Canjear </button>
+</div> <div class="bg-surface-container-low p-space-md rounded-xl flex items-center justify-between gap-space-sm opacity-80">
+<div class="w-12 h-12 rounded-xl bg-surface-container flex-shrink-0 flex items-center justify-center text-outline">
+<span class="material-symbols-outlined text-[24px]">lock</span>
+</div>
+<div class="flex-1 min-w-0">
+<span class="font-title-md text-title-md text-on-surface font-semibold truncate">Pase VIP Inauguraciones</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">Acceso con curadores y artistas contemporáneos</p>
+<span class="font-label-tag text-label-tag text-outline font-medium inline-block mt-0.5">Requiere 700 XP (Nivel 5)</span>
+</div>
+<span class="material-symbols-outlined text-outline text-[20px]">lock_clock</span>
+</div>
+</div>
+</div> <div class="fixed inset-0 z-50 bg-black/80 backdrop-blur-md hidden flex-col justify-between p-margin pt-safe pb-safe" id="ar-modal">
+<div class="flex items-center justify-between text-white pt-4">
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-secondary-fixed animate-ping"></span>
+<span class="font-label-tag text-label-tag uppercase tracking-widest">AR Scanner Activo</span>
+</div>
+<button class="w-10 h-10 rounded-full bg-white/20 text-white flex items-center justify-center" id="close-ar-modal">
+<span class="material-symbols-outlined text-[22px]">close</span>
+</button>
+</div> <div class="relative w-full aspect-square max-w-[320px] mx-auto flex items-center justify-center">
+<div class="absolute inset-0 rounded-3xl border-2 border-dashed border-secondary animate-pulse opacity-80"></div>
+<div class="w-20 h-20 rounded-full border border-white/50 flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-[32px] animate-bounce">center_focus_weak</span>
+</div>
+<div class="absolute bottom-4 px-3 py-1.5 rounded-full bg-black/60 text-white text-center">
+<p class="font-label-tag text-label-tag">Apunta hacia el retrato o código de sala</p>
+</div>
+</div>
+<div class="bg-surface-container-lowest text-on-surface rounded-xl p-space-md mb-4 shadow-2xl">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-primary/10 text-primary flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[24px]">lightbulb</span>
+</div>
+<div class="flex-1">
+<h5 class="font-title-md text-title-md font-bold">Pista #3 Detectada</h5>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Busca el cáliz de plata virreinal con la inscripción de 1782 en la vitrina central.</p>
+</div>
+</div>
+<button class="mt-space-md w-full py-2.5 rounded-full bg-primary text-on-primary font-label-lg text-label-lg active:scale-95 transition-transform" id="simulate-scan-success"> Escanear Ahora (+50 XP) </button>
+</div>
+</div>
+</div>
+<script> (function initCulturalGaming() { const modal = document.getElementById('ar-modal'); const openBtns = [ document.getElementById('open-ar-scanner'), document.getElementById('btn-start-quest-1') ]; const closeBtn = document.getElementById('close-ar-modal'); const simulateSuccess = document.getElementById('simulate-scan-success'); openBtns.forEach(btn => { if (btn) { btn.addEventListener('click', () => { modal.classList.remove('hidden'); modal.classList.add('flex'); }); } }); if (closeBtn) { closeBtn.addEventListener('click', () => { modal.classList.add('hidden'); modal.classList.remove('flex'); }); } if (simulateSuccess) { simulateSuccess.addEventListener('click', () => { simulateSuccess.textContent = '¡Símbolo Encontrado! ✨'; simulateSuccess.classList.remove('bg-primary'); simulateSuccess.classList.add('bg-secondary'); setTimeout(() => { modal.classList.add('hidden'); modal.classList.remove('flex'); simulateSuccess.textContent = 'Escanear Ahora (+50 XP)'; simulateSuccess.classList.remove('bg-secondary'); simulateSuccess.classList.add('bg-primary'); }, 1200); }); } // Scroll hint smooth trigger const hintBtn = document.getElementById('btn-quick-hint'); if (hintBtn) { hintBtn.addEventListener('click', () => { const questCard = document.getElementById('btn-start-quest-1'); if (questCard) { questCard.scrollIntoView({ behavior: 'smooth', block: 'center' }); } }); } })();
+</script> </main> </div> <nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-2px_16px_rgba(27,27,29,0.06)]" data-active-classes="text-primary font-bold"><div class="flex justify-around items-center h-16 px-space-xs"><a aria-current="page" class="flex flex-col items-center justify-center min-w-[44px] min-h-[44px] flex-1 py-1 transition-colors text-primary font-bold" data-path="descubre" href="#"><span class="material-symbols-outlined text-[24px]">explore</span><span class="font-label-tag text-label-tag mt-0.5">Descubre</span></a><a class="flex flex-col items-center justify-center min-w-[44px] min-h-[44px] flex-1 py-1 text-on-surface-variant transition-colors hover:text-on-surface" data-path="eventos-noches" href="#"><span class="material-symbols-outlined text-[24px]">nightlife</span><span class="font-label-tag text-label-tag mt-0.5">Eventos</span></a><a class="flex flex-col items-center justify-center min-w-[44px] min-h-[44px] flex-1 py-1 text-on-surface-variant transition-colors hover:text-on-surface" data-path="pistas-ar" href="#"><span class="material-symbols-outlined text-[24px]">view_in_ar</span><span class="font-label-tag text-label-tag mt-0.5">Pistas AR</span></a><a class="flex flex-col items-center justify-center min-w-[44px] min-h-[44px] flex-1 py-1 text-on-surface-variant transition-colors hover:text-on-surface" data-path="tickets-visita" href="#"><span class="material-symbols-outlined text-[24px]">confirmation_number</span><span class="font-label-tag text-label-tag mt-0.5">Tickets</span></a></div></nav> </div> <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script> const SUPABASE_URL = 'https://jomstjiapqlxeqfiksan.supabase.co'; const SUPABASE_KEY = 'sb_publishable_90wYLLa03sEF5eUaZKKufA_1piANM50'; const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY); function switchTab(path) { document.querySelectorAll('.view-pane').forEach(el => el.classList.add('hidden')); const target = document.getElementById('view-' + path); if (target) { target.classList.remove('hidden'); window.scrollTo({ top: 0, behavior: 'smooth' }); } document.querySelectorAll('nav [data-path]').forEach(a => { const p = a.getAttribute('data-path'); if (p === path) { a.className = "flex flex-col items-center justify-center min-w-[44px] min-h-[44px] flex-1 py-1 transition-colors text-primary font-bold"; } else { a.className = "flex flex-col items-center justify-center min-w-[44px] min-h-[44px] flex-1 py-1 text-on-surface-variant transition-colors hover:text-on-surface"; } }); } document.addEventListener('DOMContentLoaded', () => { document.querySelectorAll('[data-path]').forEach(el => { el.addEventListener('click', (e) => { e.preventDefault(); const p = el.getAttribute('data-path'); if (p === 'tickets-visita') { switchTab('eventos-noches'); } else { switchTab(p); } }); }); // Handle RSVP / Event Registration with Supabase window.registrarEvento = async function(nombreEvento) { const email = prompt("Ingresa tu correo para registrar tu entrada a " + nombreEvento + ":"); if (!email) return; const nombre = prompt("Ingresa tu nombre completo:") || "Joven Visitante"; try { const { data, error } = await supabase.from('eventos_registros').insert([ { nombre: nombre, email: email, evento: nombreEvento, boletos: 1, fecha: new Date().toLocaleDateString() } ]); if (error) throw error; alert("¡Registro confirmado! Tu lugar para " + nombreEvento + " ha sido guardado en Supabase."); } catch (err) { alert("Error al registrar: " + err.message); } }; // Attach registrarEvento to ticket/RSVP buttons document.querySelectorAll('#view-eventos-noches a, #view-eventos-noches button').forEach(btn => { if (btn.textContent.includes('Boleto') || btn.textContent.includes('RSVP') || btn.textContent.includes('Apartar') || btn.textContent.includes('Entrada')) { btn.onclick = (e) => { e.preventDefault(); window.registrarEvento("Noche Arocena Joven"); }; } }); // Handle AR points submission to Supabase window.guardarPuntosAR = async function(puntos) { const jugador = prompt("¡Pista completada! Ingresa tu alias para el ranking:") || "Explorador"; try { const { data, error } = await supabase.from('pistas_gamificacion').insert([ { jugador: jugador, puntos: puntos, pistas_descubiertas: ["Pista Central", "Claustro Virreinal"], tiempo_segundos: 120 } ]); if (error) throw error; alert("¡Puntuación guardada en Supabase! Revisa el tablero de líderes."); } catch(err) { alert("Error: " + err.message); } }; document.querySelectorAll('#view-pistas-ar a, #view-pistas-ar button').forEach(btn => { if (btn.textContent.includes('Escanear') || btn.textContent.includes('Comenzar') || btn.textContent.includes('Pista')) { btn.onclick = (e) => { e.preventDefault(); window.guardarPuntosAR(250); }; } }); });
+</script>
+</body>
+</html>
